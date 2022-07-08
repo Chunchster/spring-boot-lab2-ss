@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lab2-Grupo2</title>
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+      <style>
+      * {
+        margin: 0;
+        padding: 0;
+        font-family: sans-serif;
+        box-sizing: border-box;
+      }
+      
+      :root{
+          scroll-behavior: smooth;
+      }
+
+      .header{
+          height: 100vh;
+          background-image: linear-gradient(to top, rgba(220, 214, 247, 0.5) 0%, hsla(261, 7%, 97%, 0.5) 100%), url(img/woman.jpg);
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: cover;
+          
+      }
+
+      .contenedor{
+          width: 90%;
+          max-width: 1200px;
+          overflow: hidden;
+          margin: auto;
+          padding: 60px 0;
+      }
+
+      .contenedor-head{
+          width: 90%;
+          max-width: 1200px;
+          overflow: hidden;
+          margin: auto;
+          padding: 290px 0;
+      }
+
+      .copy-contact{
+          font-weight: 300;
+          font-size: 20px;
+          margin-top: 10px;
+          text-align: left;
+      }
+
+      .chartCard {
+        width: 100vw;
+        height: calc(100vh - 40px);
+        background: rgba(26, 114, 255, 0.2);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .chartBox {
+        width: 700px;
+        padding: 20px;
+        border-radius: 20px;
+        border: solid 3px rgb(26, 91, 255);
+        background: white;
+        align-items: center;
+      }
+
+      .titulo{
+          font-size: 60px;
+          margin-bottom: 15px;
+          text-align: left;
+
+      }
+
+      footer{
+          background: rgba(50, 129, 255, 0.8);;
+          padding-bottom: 0.1px;
+      }
+
+      .footer-content{
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          flex-wrap: wrap;
+          padding-top: 60px;
+          padding-bottom: 40px;
+      }
+
+      .contact-us{
+          width: 40%;
+          color: #fff;
+      }
+
+      .brand{
+          font-weight: 500;
+          font-size: 35px;
+      }
+
+      .brand+p{
+          font-weight: 500;
+      }
+
+      .social-media{
+          width: 50%;
+          display: flex;
+          justify-content: flex-end;
+      }
+
+      .social-media-icon{
+          display: inline-block;
+          margin-left: 20px;
+          width: 60px;
+          height: 60px;
+          border: 1px solid #fff;
+          border-radius: 50%;
+          text-align: center;
+          color: #fff;
+      }
+
+      .social-media-icon i{
+          font-size: 30px;
+          line-height: 60px;
+      }
+
+      .line{
+          width: 90%;
+          max-width: 1200px;
+          margin: auto;
+          height: 2px;
+          background: #fff;
+          margin-bottom: 60px;
+      }
+
+      .social-media-icon:hover{
+          background: #fff;
+          color:rgba(50, 129, 255, 0.8);;
+      }
+
+      @media screen and (max-width: 800px){
+          .titulo{
+              font-size: 40px;
+          }
+          
+          .footer-content{
+              justify-content: center;
+          }
+
+          .social-media{
+              width: 80%;
+              justify-content: space-evenly;
+          }
+
+          .social-media-icon{
+              margin-left: 0;
+          }
+
+          .contact-us{
+              text-align: center;
+              width: 80%;
+              margin-bottom: 40px;
+          }
+          
+      }
+
+
+      @media screen and (max-width: 500px){
+          .titulo{
+              font-size: 30px;
+          }
+
+          .subtitulo{
+              font-size: 30px;
+          }
+
+          .social-media{
+              width: 100%;
+              justify-content: space-evenly;
+          }
+
+          .social-media-icon{
+              margin-left: 0;
+          }
+
+          .contact-us{
+              text-align: center;
+              width: 95%;
+              margin-bottom: 40px;
+          }
+      }
+    </style>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <script>
+      function lectura(numero = 0){
+        buscar(numero);
+      }
+    </script>
+  </head>
+  <body style="background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);">
+    <nav class="navbar navbar-expand-lg navbar-light bg-info fixed-top" style="background-image: linear-gradient(120deg, #87b5fe 0%, #a8e3ff 100%);">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="/">Laboratorio 2 - Grupo 2</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Consultas
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li>
+                  <a class="dropdown-item" onclick="lectura(0)">
+                    Personas mayores de 15 años viviendo con VIH
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" onclick="lectura(1)">
+                    Edad promedio de hombres en su primer matrimonio
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" onclick="lectura(2)">
+                    Edad promedio de mujeres en su primer matrimonio
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" onclick="lectura(3)">
+                    Porcentaje de prevalencia de diabetes entre personas de 25 y
+                    79 años
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" onclick="lectura(4)">
+                    Camas de hospital por cada 1000 personas
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" onclick="lectura(5)">
+                    Incidencia de TBC por cada 1000 personas
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" onclick="lectura(6)">
+                    Expectativa de vida al nacer
+                  </a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <a class="nav-link active" aria-current="page" href="/" style="color: black;">
+            Dashboard
+          </a>
+        </div>
+      </div>
+    </nav>
+    <div class="container-xl mt-5 p-5 justify-content-center align-content-center" style="height: 100vh;">
+      <div class="row justify-content-center align-content-center">
+        <p class="h1 text-center">Seleccione una consulta</h1>
+      </div>
+      <div class="row justify-content-center align-content-center" style="margin-top: 3.5%;">
+        <div class="chartBox">
+          <div id="container" style="height: 400px;"></div>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div class="contenedor footer-content">
+          <div class="contact-us">
+              <h2 class="brand">Sistemas Distribuidos</h2>
+              <p class="copy-contact">
+                   Grupo 2
+              </p>
+          </div>
+          <div class="social-media">
+              <a href="https://www.facebook.com" target="_blank" class="social-media-icon">
+                  <i class='bx bxl-facebook'></i>
+              </a>
+              <a href="https://www.instagram.com" target="_blank" class="social-media-icon">
+                  <i class='bx bxl-instagram' ></i>
+              </a>
+              <a href="https://twitter.com" target="_blank" class="social-media-icon">
+                  <i class='bx bxl-twitter' ></i>
+              </a>
+          </div>
+      </div>
+      <div class="line"></div>
+    </footer>
+    <script src="js/highcharts.js"></script>
+    <script src="js/jquery.js"></script>
+    <script src="js/index.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
